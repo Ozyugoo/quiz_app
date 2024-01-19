@@ -1,0 +1,26 @@
+{
+  "name": "quiz_app",
+  "version": "1.0.0",
+  "description": "a basic quiz application",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ozyugoo/Stella-frontend_projects.git"
+  },
+  "keywords": [
+    "quiz application",
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "Stella Ugoo-Okonkwo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ozyugoo/Stella-frontend_projects/issues"
+  },
+  "homepage": "https://ozyugoo.github.io/Stella-frontend_projects/"
+}

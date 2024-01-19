@@ -73,20 +73,12 @@ function displayQuestion() {
   // we get the answers the array and assign it to variable.
   const answers = questions[currQuestion].answers
 
-  //display current question number and remaining question
-  // function dispCurrQuestion() {
-  //   let count = currQuestion + 1;
+  // display current question number and remaining question
+  function dispCurrQuestion() {
+    let count = currQuestion + 1;
 
-  //   document.getElementById('current').innerText = `Question ${count} out of ${questions.length}`;
-
-  //   // for (count = 0; count <= questions.length; count++) {
-  //   //   if (currQuestion === count) {
-  //   //     document.getElementById('current').innerText = `Question ${count} out of ${questions.length}`;
-  //   //     countNum++;
-  //   //   }
-      
-  //   // }
-    
+    document.getElementById('current').innerText = `Question ${count} out of ${questions.length}`;
+   
   }
 
   dispCurrQuestion();

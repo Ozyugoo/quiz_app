@@ -64,6 +64,7 @@ const questions = [
 
 let currQuestion = 0;
 let score = 0;
+let player = prompt("Please enter your name?");
 
 function displayQuestion() {
   // get the element of question and assign it to the questions in the array
@@ -71,7 +72,7 @@ function displayQuestion() {
 
  
   // we get the answers the array and assign it to variable.
-  const answers = questions[currQuestion].answers
+  const answers = questions[currQuestion].answers;
 
   // display current question number and remaining question
   function dispCurrQuestion() {
@@ -109,11 +110,25 @@ function selectAnswer(index) {
 document.getElementById('next').addEventListener('click', () => {
   currQuestion++;
 
+  // let failedQuestion = 0;
+
+  // if (selectAnswer(index) === failedQuestion) {
+  //   document.getElementById('failed').innerHTML = `<p>You failed ${questions[currQuestion].correct}</p>`;
+  //   failedQuestion++;
+  // } 
+
   if (currQuestion < questions.length) {
     displayQuestion();
-    document.getElementById('next').disabled = true;
-  } else {
-    document.getElementById('result').innerHTML = `<p>Your total Score is: ${score}/${questions.length}</p>`
+      document.getElementById('next').disabled = true;
+  } else if (currQuestion === questions.length) {
+      document.getElementById('next').innerText = 'Check Your Score';
+  } else if ('Check Your Score') {      
+      if (score > 7) {
+        document.getElementById('result').innerHTML = `
+        ${player}: You are superb <p>Your total Score is: ${score}/${questions.length}</p>`;
+      } else if (score < 7) {
+        document.getElementById('result').innerHTML = `${player}: Try harder, You've got this! <p>Your total Score is: ${score}/${questions.length}</p>`;
+      }
   }
 });
 

@@ -11,6 +11,8 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgb(184, 187, 214);
+  width: 100vw;
+  height: 100vh;
 }
 
 .title {
@@ -88,4 +90,23 @@ body {
 .current, .failed {
   padding: 10px;
   margin: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+    margin: 40px auto;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .container {
+    margin: auto;
+    width: 90vw;
+    font-size: 16px;
+  }
+  
 }

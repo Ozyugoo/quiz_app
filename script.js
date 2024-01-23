@@ -119,16 +119,20 @@ document.getElementById('next').addEventListener('click', () => {
 
   if (currQuestion < questions.length) {
     displayQuestion();
-      document.getElementById('next').disabled = true;
+    document.getElementById('review').disabled = true;
+    document.getElementById('next').disabled = true;
   } else if (currQuestion === questions.length) {
       document.getElementById('next').innerText = 'Check Your Score';
-  } else if ('Check Your Score') {      
+  } else if ('Check Your Score') {
       if (score > 7) {
         document.getElementById('result').innerHTML = `
         ${player}: You are superb <p>Your total Score is: ${score}/${questions.length}</p>`;
-      } else if (score < 7) {
+        document.getElementById('review').disabled = false;        
+      } else if (score < 7) { 
         document.getElementById('result').innerHTML = `${player}: Try harder, You've got this! <p>Your total Score is: ${score}/${questions.length}</p>`;
+        document.getElementById('review').disabled = false;
       }
+    
   }
 });
 

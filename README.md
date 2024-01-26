@@ -10,3 +10,5 @@ Built with:
 Default Feat: Sums the total of the all answered question and outputs the total of correct answers / total answer
 
 New Improved Feat: Display Current Number of the question
+
+URL: https://ozyugoo.github.io/quiz_app/

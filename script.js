@@ -110,13 +110,6 @@ function selectAnswer(index) {
 document.getElementById('next').addEventListener('click', () => {
   currQuestion++;
 
-  // let failedQuestion = 0;
-
-  // if (selectAnswer(index) === failedQuestion) {
-  //   document.getElementById('failed').innerHTML = `<p>You failed ${questions[currQuestion].correct}</p>`;
-  //   failedQuestion++;
-  // } 
-
   if (currQuestion < questions.length) {
     displayQuestion();
     document.getElementById('review').disabled = true;
@@ -131,10 +124,27 @@ document.getElementById('next').addEventListener('click', () => {
       } else if (score < 7) { 
         document.getElementById('result').innerHTML = `${player}: Try harder, You've got this! <p>Your total Score is: ${score}/${questions.length}</p>`;
         document.getElementById('review').disabled = false;
-      }
-    
-  }
+      }   
+  };
+  
+  let reviews = document.getElementById('review').innerHTML;
+  let grade = 0;
+
+  function reviewResult() {
+    let failed = questions[currQuestion].correct;
+    if (reviews === false) {
+      reviews.addEventListener('click', () => {
+        if (selectAnswer(failed) === false) {
+          grade++;
+        };
+        reviews = `Hi! ${player}, <p>You failed question ${failed.map}</p>`;
+      })
+    };    
+  };
+  reviewResult();
 });
+
+  
 
 // calling display questions function
 

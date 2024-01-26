@@ -17,11 +17,17 @@ body {
   padding-top: 20px;
 }
 
-.title {
+.title, .heading{
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
   font-style: normal;
   color: rgba(7, 21, 46, 0.86);
+}
+
+.heading {
+  margin-top: 30px;
+  justify-content: none;
+  align-items: none;
 }
 
 .container {
